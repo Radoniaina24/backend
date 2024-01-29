@@ -7,11 +7,7 @@ const userSchema = mongoose.Schema({
     email: {
         type: String,
         required:[true, 'please add email'],
-        unique: True
+        unique: true
     }
-},
-{
-    timesStamp: true
-})
-
-module.exports = mongoose.Model('User', userSchema)
+}, {timestamps: true})
+module.exports = mongoose.model('User', userSchema)
